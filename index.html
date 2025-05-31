@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sergey Zorin</title>
+  <meta name="description" content="Personal website and project portfolio of Sergey Zorin, software developer and open source enthusiast.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect width='32' height='32' fill='%23006ad4'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='white'>SZ</text></svg>">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --fg: #23272e;
+      --accent: #006ad4;
+      --nav-bg: #fff;
+      --card-bg: #fff;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui,sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      background: var(--nav-bg);
+      box-shadow: 0 1px 4px #0001;
+      padding: 0.5em 1em;
+      gap: 1em;
+    }
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eee;
+      display: inline-block;
+      margin-right: 1em;
+    }
+    nav .nav-link {
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+      padding: 0.2em 0.7em;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    nav .nav-link.active, nav .nav-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    #theme-toggle {
+      margin-left: auto;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--accent);
+    }
+    main {
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 2em 1em 1em 1em;
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px #0001;
+      flex: 1;
+    }
+    h1, h2 {
+      color: var(--accent);
+      margin-bottom: 0.3em;
+    }
+    .badges img {
+      margin-right: 0.6em;
+      vertical-align: middle;
+    }
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin: 2em 0 0 0;
+    }
+    .project-list li {
+      margin: 1.2em 0;
+      background: #f5faff;
+      border-left: 4px solid var(--accent);
+      padding: 1em 1em 1em 1.5em;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .project-list a {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2em 1em 1em 1em;
+      color: #888;
+      font-size: 0.95em;
+      margin-top: 2em;
+    }
+    @media (max-width: 600px) {
+      main { padding: 1em 0.3em; }
+      nav { flex-direction: column; align-items: flex-start; }
+    }
+    body.dark, html[data-theme="dark"] {
+      --bg: #1a1d22;
+      --fg: #e7e9ef;
+      --accent: #3396fa;
+      --nav-bg: #22262c;
+      --card-bg: #23262f;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo" aria-label="Sergey Zorin" style="background: #006ad4; color: #fff; display: flex; align-items: center; justify-content: center; font-size:1.3em;">SZ</div>
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="https://github.com/serg5z" class="nav-link">GitHub</a>
+    <a href="mailto:serg5z@gmail.com" class="nav-link">Contact</a>
+    <button id="theme-toggle" aria-label="Toggle theme"></button>
+  </nav>
+  <main>
+    <h1>Sergey Zorin</h1>
+    <div class="badges">
+      <a href="https://github.com/serg5z/dialog-layout"><img src="https://img.shields.io/github/stars/serg5z/dialog-layout?style=social" alt="GitHub stars"></a>
+      <img src="https://img.shields.io/badge/license-BSD-blue" alt="BSD License">
+    </div>
+    <p>
+      Hi! I'm Sergey, a software developer and open source enthusiast.<br>
+      I work on cross-platform tools, shell extensions, and UI frameworks.<br>
+      <a href="https://github.com/serg5z">View my GitHub</a> or <a href="mailto:serg5z@gmail.com">send me an email</a>.
+    </p>
+    <h2>Projects</h2>
+    <ul class="project-list">
+      <li>
+        <a href="https://serg5z.github.io/dialog-layout/">dialog-layout</a><br>
+        Win32 dialog layout engine for automatic resizing and anchor-based UI. <br>
+        <small><a href="https://github.com/serg5z/dialog-layout">Source &rarr;</a></small>
+      </li>
+      <li>
+        <a href="https://github.com/serg5z/diff-ext">diff-ext</a><br>
+        Context menu extension for file comparison on Windows, Nautilus, and more.
+      </li>
+      <!-- Add more projects as needed -->
+    </ul>
+  </main>
+  <footer>
+    &copy; 2025 Sergey Zorin &mdash; <a href="https://github.com/serg5z">GitHub</a> &mdash; <a href="mailto:serg5z@gmail.com">Email</a>
+  </footer>
+  <script>
+    // Theme toggle with icon and persistence
+    const themeToggle = document.getElementById('theme-toggle');
+    function setThemeIcon(isDark) {
+      themeToggle.textContent = isDark ? "🌜" : "🌞";
+    }
+    let theme = localStorage.getItem('theme');
+    if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark', isDark);
+    setThemeIcon(isDark);
+    themeToggle.addEventListener('click', () => {
+      const isNowDark = !document.body.classList.contains('dark');
+      document.body.classList.toggle('dark', isNowDark);
+      setThemeIcon(isNowDark);
+      localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
