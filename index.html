@@ -13,6 +13,7 @@
       --accent: #006ad4;
       --nav-bg: #fff;
       --card-bg: #fff;
+      --project-bg: #f5faff;
     }
     body {
       background: var(--bg);
@@ -83,7 +84,7 @@
     }
     .project-list li {
       margin: 1.2em 0;
-      background: #f5faff;
+      background: var(--project-bg);
       border-left: 4px solid var(--accent);
       padding: 1em 1em 1em 1.5em;
       border-radius: 6px;
@@ -112,6 +113,7 @@
       --accent: #3396fa;
       --nav-bg: #22262c;
       --card-bg: #23262f;
+      --project-bg: #22293a;
     }
   </style>
 </head>
@@ -120,7 +122,6 @@
     <div class="logo" aria-label="Sergey Zorin" style="background: #006ad4; color: #fff; display: flex; align-items: center; justify-content: center; font-size:1.3em;">SZ</div>
     <a href="index.html" class="nav-link active">Home</a>
     <a href="https://github.com/serg5z" class="nav-link">GitHub</a>
-    <a href="mailto:serg5z@gmail.com" class="nav-link">Contact</a>
     <button id="theme-toggle" aria-label="Toggle theme"></button>
   </nav>
   <main>
@@ -132,7 +133,7 @@
     <p>
       Hi! I'm Sergey, a software developer and open source enthusiast.<br>
       I work on cross-platform tools, shell extensions, and UI frameworks.<br>
-      <a href="https://github.com/serg5z">View my GitHub</a> or <a href="mailto:serg5z@gmail.com">send me an email</a>.
+      <a href="https://github.com/serg5z">View my GitHub</a>.
     </p>
     <h2>Projects</h2>
     <ul class="project-list">
@@ -149,7 +150,7 @@
     </ul>
   </main>
   <footer>
-    &copy; 2025 Sergey Zorin &mdash; <a href="https://github.com/serg5z">GitHub</a> &mdash; <a href="mailto:serg5z@gmail.com">Email</a>
+    &copy; 2025 Sergey Zorin &mdash; <a href="https://github.com/serg5z">GitHub</a> &mdash;
   </footer>
   <script>
     // Theme toggle with icon and persistence
@@ -171,3 +172,4 @@
   </script>
 </body>
 </html>
+
